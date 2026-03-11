@@ -1,0 +1,168 @@
+/* Scroll Reveal Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Blob floating animations */
+@keyframes float1 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(30px, -20px);
+  }
+  66% {
+    transform: translate(-20px, 30px);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-25px, 20px);
+  }
+  66% {
+    transform: translate(20px, -30px);
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(35px, 15px);
+  }
+  66% {
+    transform: translate(-30px, -25px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: blur(40px) brightness(1);
+  }
+  50% {
+    filter: blur(50px) brightness(1.1);
+  }
+}
+
+/* Reveal class for scroll animations */
+.reveal {
+  opacity: 0;
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.reveal-left {
+  opacity: 0;
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.reveal-left.active {
+  opacity: 1;
+}
+
+.reveal-right {
+  opacity: 0;
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.reveal-right.active {
+  opacity: 1;
+}
+
+.reveal-scale {
+  opacity: 0;
+  animation: scaleIn 0.8s ease forwards;
+}
+
+.reveal-scale.active {
+  opacity: 1;
+}
+
+/* Staggered reveals */
+.reveal-stagger > * {
+  opacity: 0;
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.reveal-stagger.active > :nth-child(1) { animation-delay: 0s; }
+.reveal-stagger.active > :nth-child(2) { animation-delay: 0.1s; }
+.reveal-stagger.active > :nth-child(3) { animation-delay: 0.2s; }
+.reveal-stagger.active > :nth-child(4) { animation-delay: 0.3s; }
+.reveal-stagger.active > :nth-child(5) { animation-delay: 0.4s; }
+
+/* Blob classes */
+.blob {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  position: absolute;
+  opacity: 0.6;
+  filter: blur(40px);
+}
+
+.blob-1 {
+  animation: float1 8s ease-in-out infinite, glow 4s ease-in-out infinite;
+}
+
+.blob-2 {
+  animation: float2 9s ease-in-out infinite, glow 4.5s ease-in-out infinite;
+}
+
+.blob-3 {
+  animation: float3 10s ease-in-out infinite, glow 5s ease-in-out infinite;
+}
