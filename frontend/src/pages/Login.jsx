@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/Auth.css';
@@ -10,6 +10,7 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,6 +29,7 @@ function Login() {
 
     console.log('Login:', { email, password, rememberMe });
     // TODO: Implement actual login
+    navigate('/dashboard/profile');
   };
 
   const handleGoogleLogin = () => {

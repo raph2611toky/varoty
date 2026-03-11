@@ -1,0 +1,133 @@
+.content-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.content-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-header {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.content-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  text-balance;
+}
+
+.content-body {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.content-section {
+  margin-bottom: 60px;
+}
+
+.content-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.content-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.content-section ul {
+  margin-left: 20px;
+  color: var(--text-secondary);
+}
+
+.content-section li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.content-section a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.content-section a:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+/* Grid for 2-column layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.content-box {
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.content-box:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 16px rgba(96, 165, 250, 0.1);
+}
+
+.content-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.content-box p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-header {
+    padding: 40px 20px;
+    margin-top: 50px;
+  }
+
+  .content-title {
+    font-size: 32px;
+  }
+
+  .content-body {
+    padding: 40px 20px;
+  }
+
+  .content-section h2 {
+    font-size: 24px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

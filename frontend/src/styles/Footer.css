@@ -43,7 +43,7 @@
   letter-spacing: 0.5px;
 }
 
-.footer-section > p {
+.footer-section>p {
   font-size: 14px;
   color: var(--text-secondary);
   margin: 0;

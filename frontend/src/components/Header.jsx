@@ -13,10 +13,10 @@ function Header() {
             <span className="logo-text">Varoty</span>
           </Link>
           <nav className="nav">
-            <a href="/#features" className="nav-link">Fonctionnalités</a>
-            <a href="/#demo" className="nav-link">Démo</a>
-            <a href="/#testimonials" className="nav-link">Témoignages</a>
-            <a href="/#contact" className="nav-link">Contact</a>
+            <a href="#features" className="nav-link">Fonctionnalités</a>
+            <a href="#demo" className="nav-link">Démo</a>
+            <a href="#testimonials" className="nav-link">Témoignages</a>
+            <a href="#contact" className="nav-link">Contact</a>
           </nav>
         </div>
         <div className="header-right">
