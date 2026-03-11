@@ -43,7 +43,7 @@
   letter-spacing: 0.5px;
 }
 
-.footer-section > p {
+.footer-section>p {
   font-size: 14px;
   color: var(--text-secondary);
   margin: 0;
@@ -86,7 +86,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--accent-primary);
+  /* background: var(--accent-primary); */
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -98,8 +98,12 @@
   border: none;
 }
 
+social-link svg {
+  margin: auto;
+}
+
 .social-link:hover {
-  background: var(--accent-secondary);
+  /* background: var(--accent-secondary); */
   transform: translateY(-2px);
 }
 
